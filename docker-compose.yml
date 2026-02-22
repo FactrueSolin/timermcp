@@ -1,0 +1,10 @@
+services:
+  timermcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "18003:8000"
+    environment:
+      - BIND_ADDRESS=0.0.0.0:8000
+    restart: unless-stopped
